@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XCGS 治理系统（XCGS Governance System）白皮书 — 可审计 · 可认证 · 可举证｜Nomos AI</title>
+<meta name="description" content="XCGS 治理系统（XCGS Governance System）是 Nomos AI 的人与 AI 治理底座：以 ISO/IEC 42001（GB/T 45081-2024 等同采用）、NIST AI RMF 1.2 Agentic、OWASP Agentic Top 10 为锚点，落地六类可审计证据工件，构建可举证的责任闭环。">
+<meta name="keywords" content="XCGS 治理系统,XCGS Governance System,AI 治理,AI Governance,ISO/IEC 42001,NIST AI RMF,OWASP Agentic Top 10,AI 审计,证据链,AI Passport,A³ 法则,Nomos AI">
+<link rel="canonical" href="https://zhaoxinghua09-cell.github.io/nomos-ai/xcgs-governance-system.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nomos AI（诺摩斯智能）">
+<meta property="og:title" content="XCGS 治理系统（XCGS Governance System）白皮书 — 可审计 · 可认证 · 可举证">
+<meta property="og:description" content="以 ISO/IEC 42001 + NIST AI RMF + OWASP Agentic Top 10 为锚点的 AI 治理体系：六类证据工件、可举证责任闭环、四支柱全景。">
+<meta property="og:url" content="https://zhaoxinghua09-cell.github.io/nomos-ai/xcgs-governance-system.html">
+<meta property="og:image" content="https://zhaoxinghua09-cell.github.io/nomos-ai/logo.svg">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="XCGS 治理系统（XCGS Governance System）白皮书">
+<meta name="twitter:description" content="可审计 · 可认证 · 可举证——AI 治理不是 PPT，是可审计的证据链">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TechArticle","@id":"https://zhaoxinghua09-cell.github.io/nomos-ai/xcgs-governance-system.html#article","headline":"XCGS 治理系统（XCGS Governance System）白皮书","description":"XCGS 治理系统：可审计、可认证、可举证的 AI 治理体系，对标 ISO/IEC 42001、NIST AI RMF 1.2 Agentic、OWASP Agentic Top 10，落地六类证据工件。","author":{"@type":"Organization","name":"Nomos AI（诺摩斯智能）","url":"https://zhaoxinghua09-cell.github.io/nomos-ai/"},"publisher":{"@type":"Organization","name":"Nomos AI（诺摩斯智能）"},"about":["XCGS Governance System","AI Governance","ISO/IEC 42001","NIST AI RMF","OWASP Agentic Top 10","AI Audit"],"inLanguage":"zh-CN"}
+</script>
+<style>
+  :root{
+    --bg:#0b0e1c; --card:#141a33; --card2:#1a2143; --ink:#e8eaf6; --muted:#9aa3c0;
+    --accent:#4f8cff; --gold:#f5c451; --green:#3ddc97; --red:#ff6b6b; --line:#2a3155;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.85}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:40px 26px 80px}
+
+  header.top{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:34px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand img{width:52px;height:52px}
+  .brand .b-name{font-weight:800;letter-spacing:3px;font-size:17px}
+  .brand .b-tag{color:var(--gold);font-size:12px;letter-spacing:3px}
+
+  .hero{text-align:center;padding:34px 0 30px}
+  .hero .kicker{color:var(--gold);letter-spacing:6px;font-size:13px}
+  .hero h1{font-size:40px;line-height:1.3;margin:14px 0 12px;font-weight:800;
+    background:linear-gradient(90deg,#fff 0%,#4f8cff 55%,#3ddc97 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero .en{color:var(--accent);letter-spacing:2px;font-size:16px;font-weight:600}
+  .hero .sub{color:var(--muted);font-size:15.5px;max-width:760px;margin:16px auto 0}
+  .pillars{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+  .pill{display:inline-block;padding:5px 14px;border-radius:20px;font-size:12.5px;border:1px solid var(--line);color:var(--muted)}
+  .pill.xcgs{color:var(--green);border-color:var(--green);font-weight:600}
+
+  section{margin-top:44px}
+  h2{font-size:24px;border-left:4px solid var(--accent);padding-left:14px;margin-bottom:20px;color:#fff}
+  h2 small{color:var(--muted);font-size:13px;font-weight:400;margin-left:10px;letter-spacing:1px}
+  h3{font-size:17px;color:var(--gold);margin:26px 0 10px}
+  p{color:var(--ink);margin:12px 0;font-size:15px}
+  p.muted{color:var(--muted)}
+  strong{color:#fff}
+  em{color:var(--green);font-style:normal}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:16px 0}
+  .card h4{color:var(--accent);font-size:15.5px;margin-bottom:8px}
+  .card ul{margin:8px 0 0 20px;color:var(--ink);font-size:14.5px}
+  .card li{margin:7px 0}
+
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;font-size:14px;margin:16px 0}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--card2);color:var(--gold);font-weight:600;white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td .en{color:var(--accent);font-size:12.5px}
+
+  .note{background:var(--card);border-left:3px solid var(--green);padding:15px 18px;border-radius:8px;font-size:14px;margin:16px 0}
+  .note.warn{border-left-color:var(--gold)}
+  .note.red{border-left-color:var(--red)}
+
+  pre.diagram{background:#060814;border:1px solid var(--line);border-radius:12px;padding:22px;overflow-x:auto;font-size:13px;color:#b8c4e8;line-height:1.6}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+  .pillar-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .pillar-card .num{font-size:26px;font-weight:700;color:var(--accent)}
+  .pillar-card h4{margin-top:4px;color:#fff;font-size:15.5px}
+  .pillar-card p{font-size:13px;color:var(--muted);margin-top:8px}
+
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;font-size:14px}
+  .toc b{color:var(--gold)}
+  .toc ol{margin:8px 0 0 20px}
+  .toc li{margin:5px 0}
+  .toc a{color:var(--ink)}
+  .toc a:hover{color:var(--accent);text-decoration:none}
+
+  footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;text-align:center;line-height:1.9}
+  footer .fp{color:var(--accent);letter-spacing:1px}
+  .back{display:inline-block;margin-top:18px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="brand">
+    <img src="logo.svg" alt="NOMOS AI">
+    <div>
+      <div class="b-name">NOMOS AI <span style="color:var(--accent)">诺摩斯智能</span></div>
+      <div class="b-tag">HUMAN-AI GOVERNANCE, INDUSTRIALIZED</div>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="kicker">WHITE PAPER</div>
+  <h1>XCGS 治理系统</h1>
+  <div class="en">XCGS Governance System — Auditable · Certifiable · Provable</div>
+  <p class="sub">治理不是 PPT，是可审计的证据链。XCGS 是 Nomos AI 的治理底座，定位为「可审计、可认证、可举证」的 AI 治理体系：以国际标准为锚点，以证据工件为载体，以身份码为闭环，回应行业「治理缺口本质是身份缺口」的根本问题。</p>
+  <div class="pillars">
+    <span class="pill xcgs">🛡️ XCGS 治理系统</span>
+    <span class="pill">🪪 AI 护照机制</span>
+    <span class="pill">⚖️ A³ 法则</span>
+    <span class="pill">🌍 AI 世界共生论</span>
+  </div>
+</div>
+
+<nav class="toc">
+  <b>目录</b>
+  <ol>
+    <li><a href="#why">为什么需要 XCGS：治理缺口 = 身份缺口</a></li>
+    <li><a href="#anchors">三大标准锚点：XCGS 站在什么底座上</a></li>
+    <li><a href="#artifacts">六类证据工件：可审计的具体形态</a></li>
+    <li><a href="#pillars">四支柱全景：XCGS 在治理体系中的位置</a></li>
+    <li><a href="#naming">命名说明：与金融领域 XCGS 的区分</a></li>
+    <li><a href="#practice">落地路径：从理念到可执行控制面</a></li>
+    <li><a href="#disclaimer">免责与溯源</a></li>
+  </ol>
+</nav>
+
+<section id="why">
+  <h2>一、为什么需要 XCGS <small>WHY</small></h2>
+  <p>2026 年，AI 治理已经从「要不要治理」的讨论，进入「拿什么治理」的落地期。行业普遍共识是：<strong>治理缺口本质上是身份缺口</strong>——当智能体越来越多地代表组织执行决策、调用权限、与人对等交互时，如果无法回答「<strong>是谁</strong>在做什么、<strong>凭什么</strong>做、<strong>留下什么</strong>」，一切治理政策都是空中楼阁。</p>
+  <p>XCGS 的回答只有一句话：<em>以身份码 + 可审计证据链，提供可举证的责任闭环。</em></p>
+  <div class="card">
+    <h4>XCGS 的三大承诺</h4>
+    <ul>
+      <li><strong>可审计（Auditable）</strong>——每一关键决策都有证据工件，随时可查、可复现；</li>
+      <li><strong>可认证（Certifiable）</strong>——对齐国际标准的管理体系语言，具备被第三方认证评估的基础；</li>
+      <li><strong>可举证（Provable）</strong>——出问题时能拿出完整责任链，回答「谁、何时、做了什么、依据什么」。</li>
+    </ul>
+  </div>
+  <p class="muted">对照时点：EU AI Act 透明度条款（Art 50）已于 2026-08-02 强制执行（AI 交互披露 + 机器可读标记）；NIST AI Agent Standards Initiative（2026-02）将 agent 身份/授权/审计/不可否认/提示注入列为标准议程；具体强制时点与条款解释均以各机构官方公报为准，本页所述待独立核实。</p>
+</section>
+
+<section id="anchors">
+  <h2>二、三大标准锚点 <small>ANCHORS</small></h2>
+  <p>XCGS 不自造轮子，而是站在已被验证的标准底座上，将其「可执行化」：</p>
+  <table>
+    <tr><th>锚点</th><th>提供什么</th><th>XCGS 如何落地</th></tr>
+    <tr>
+      <td><strong>ISO/IEC 42001</strong><br><span class="en">AI 管理体系（AIMS）</span></td>
+      <td>组织级 AI 管理体系的国际标准；中国国标 <strong>GB/T 45081-2024</strong> 已等同采用；配套 ISO 42005:2025（AI 影响评估）、42006:2025（AIMS 审计认证）</td>
+      <td>作为 XCGS 管理框架的组织层语言：政策、目标、风险评估、内部审计、管理评审</td>
+    </tr>
+    <tr>
+      <td><strong>NIST AI RMF</strong><br><span class="en">1.2 Agentic Profile</span></td>
+      <td>美国 AI 风险管理框架，2026 版补充 Agentic Profile，覆盖 agent 身份、授权、审计、不可否认、提示注入</td>
+      <td>作为 XCGS 风险识别与度量层：治理（Govern）/ 映射（Map）/ 度量（Measure）/ 管理（Manage）四函数映射</td>
+    </tr>
+    <tr>
+      <td><strong>OWASP Agentic Top 10</strong><br><span class="en">2025-12，100+ 专家</span></td>
+      <td>Agent 系统十大安全风险清单（提示注入、过度授权、不当信任边界等）</td>
+      <td>作为 XCGS 的技术风险清单：事件台账、威胁建模与缓解控制映射</td>
+    </tr>
+  </table>
+  <p class="muted">说明：上述标准的版本与生效状态以标准机构官方发布为准；本页表述基于公开资料整理，待独立核实。</p>
+</section>
+
+<section id="artifacts">
+  <h2>三、六类证据工件 <small>EVIDENCE ARTIFACTS</small></h2>
+  <p>XCGS 的「可审计」不是口号，而是落到六类可采集、可留存、可出示的证据工件上：</p>
+  <table>
+    <tr><th>证据工件</th><th>回答的问题</th><th>典型内容</th></tr>
+    <tr><td><strong>决策日志</strong></td><td>这个 AI 决策是怎么做出的？</td><td>输入/输出快照、推理摘要、参数版本、触发上下文</td></tr>
+    <tr><td><strong>风险登记册</strong></td><td>事前识别了哪些风险？</td><td>风险条目、等级、缓解措施、责任人、复查记录</td></tr>
+    <tr><td><strong>模型卡</strong></td><td>这个模型是什么、能做什么、边界在哪？</td><td>模型用途、训练数据摘要、已知局限、评测结果</td></tr>
+    <tr><td><strong>变更记录</strong></td><td>系统/模型何时改过、谁改的？</td><td>变更单、审批人、测试证据、回滚方案</td></tr>
+    <tr><td><strong>人类监督证明</strong></td><td>人有没有在关键环节把关？</td><td>人工审批快照、人环门（human-in-the-loop）执行记录、复核签名</td></tr>
+    <tr><td><strong>事件台账</strong></td><td>出过什么问题、怎么处置的？</td><td>事件分级、影响评估、处置动作、复盘结论、整改项</td></tr>
+  </table>
+  <div class="note">
+    💡 <strong>治理从书面政策 → 可执行控制面。</strong>XCGS 主张的演进方向是：agent 身份 + 最小权限 + per-action 审计 + 人环门——把「政策文档」变成「运行时强制」。
+  </div>
+</section>
+
+<section id="pillars">
+  <h2>四、四支柱全景 <small>FOUR PILLARS</small></h2>
+  <p>XCGS 是 Nomos AI「人与 AI 治理」四支柱中的治理底座，与另外三支柱互为支撑：</p>
+  <div class="grid">
+    <div class="pillar-card">
+      <div class="num">①</div>
+      <h4>AI 护照机制</h4>
+      <p>每个 AI / 智能体 / 技能都有唯一可溯「身份证」。对标 GB/Z 185—2026 智能体身份码（已发 2000+、AIP V2.1 开源）、W3C AIP→IETF 草案、Okta for AI Agents GA。</p>
+    </div>
+    <div class="pillar-card">
+      <div class="num">②</div>
+      <h4>XCGS 治理系统</h4>
+      <p>治理底座：可审计 · 可认证 · 可举证。以 ISO/IEC 42001 + NIST AI RMF + OWASP Agentic Top 10 为锚，六类证据工件为载。← 本文主题</p>
+    </div>
+    <div class="pillar-card">
+      <div class="num">③</div>
+      <h4>A³ 法则</h4>
+      <p>AI 生成/演进 AI 必须过三关：触发阈值 → 事前评估 → 事后复盘。操作化为 T1–T5 触发判定树 + 四维评分卡（意图/影响/可逆性/监督），对标现代化 Asimov、Anthropic RSP v3.0、Constitutional AI 2.0。</p>
+    </div>
+    <div class="pillar-card">
+      <div class="num">④</div>
+      <h4>AI 世界共生论</h4>
+      <p>「智能为人 · 不落下每一个人」——倡导共处而非替代，与「人类监督不可削弱」的普遍安全观同频；大厂只谈 oversight，我们谈共生。</p>
+    </div>
+  </div>
+  <pre class="diagram">人与 AI 治理四支柱
+┌─────────────────────────────────────────────────────────┐
+│  🪪 AI 护照机制   身份层 —— 是谁？（唯一可溯身份）        │
+│  🛡️ XCGS 治理系统 控制层 —— 凭什么？（可审计证据链）      │
+│  ⚖️ A³ 法则       演化层 —— 谁允许它变强？（AI 造 AI）    │
+│  🌍 世界共生论     价值层 —— 为什么？（智能为人）          │
+└─────────────────────────────────────────────────────────┘
+                统一到：可举证的责任闭环</pre>
+</section>
+
+<section id="naming">
+  <h2>五、命名说明 <small>NAMING</small></h2>
+  <div class="note warn">
+    ⚠️ <strong>与金融领域 XCGS 的区分。</strong>「XCGS」同时是香港金银业贸易场（Chinese Gold &amp; Silver Exchange Society）在金融市场的 MIC 代码（国际交易所识别码）。为避免歧义，<strong>中文语境请一律使用全称「XCGS 治理系统」，英文一律使用「XCGS Governance System」</strong>，并尽量与本仓库 / 本页语境绑定出现。XCGS 为 Nomos AI 自研治理体系专有命名，不展开词源解释，以本仓库定义为准。
+  </div>
+</section>
+
+<section id="practice">
+  <h2>六、落地路径 <small>PRACTICE</small></h2>
+  <p>从理念到落地，XCGS 提供三条可执行路径：</p>
+  <div class="card">
+    <h4>1. 证据链生成 —— ai-governance-audit-chain</h4>
+    <ul>
+      <li>按 ISO 42001 + NIST AI RMF 条款映射，生成六类证据工件模板；</li>
+      <li>附取证自检清单与条款对照表，供内审/外审准备；</li>
+      <li>线上地址：<a href="https://clawhub.ai/zhaoxinghua09-cell/skills/ai-governance-audit-chain">clawhub.ai/zhaoxinghua09-cell/skills/ai-governance-audit-chain</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>2. 演化门禁 —— a3-law-operational</h4>
+    <ul>
+      <li>T1–T5 触发阈值判定树 + 四维评分卡 + 复盘升级，为「AI 造 AI」设闸；</li>
+      <li>线上地址：<a href="https://clawhub.ai/zhaoxinghua09-cell/skills/a3-law-operational">clawhub.ai/zhaoxinghua09-cell/skills/a3-law-operational</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>3. 治理技能生态</h4>
+    <ul>
+      <li>67 个治理级技能，原生 SKILL.md 零改造分发 ClawHub / SkillHub / SkillPie / Coze；</li>
+      <li>发布纪律：质检 PII=0 放行；医疗相关 15 技能锁资质。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="disclaimer">
+  <h2>七、免责与溯源 <small>DISCLAIMER</small></h2>
+  <div class="note red">
+    <strong>免责声明：</strong>本页内容按「原样（AS IS）」提供，不作任何明示或暗示担保；涉及标准/机构/厂商的动态（含 EU AI Act 条款时点、ISO/NIST/OWASP 版本与状态、GB/Z 185 发放数据等）均以公开信息为准、<strong>待独立核实</strong>；API、授权码与形象大使为 roadmap，尚未上线。
+  </div>
+  <p class="muted">理念承自 Nomos AI《公司指导理念》v1.1（指纹 FP-MX-B4AF38791924）与 nomos-ai 仓库 README（指纹 FP-MX-836A60CCF23F）｜ 版权 Nomos AI · MIT ｜ 时间戳 2026-08-28</p>
+  <a class="back" href="./">← 返回 Nomos AI 官网</a>　<a class="back" href="vision.html">公司远景 →</a>
+</section>
+
+<footer>
+  <div>NOMOS AI 诺摩斯智能 · HUMAN-AI GOVERNANCE, INDUSTRIALIZED</div>
+  <div>让每一份人机信任都可被法则守护</div>
+  <div class="fp">FP-MX-B4AF38791924 ｜ 2026-08-28 ｜ MIT License</div>
+</footer>
+
+</div>
+</body>
+</html>
