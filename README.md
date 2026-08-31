@@ -27,6 +27,12 @@ XCGS 是 Nomos AI 的治理底座，定位为**可审计、可认证、可举证
 > 中文语境请用全称「XCGS 治理系统」，与金融领域的 XCGS（金银交易所 MIC 代码）区分。
 > 说明：XCGS 为 Nomos AI 自研治理体系专有命名，不展开词源解释，以本仓库定义为准。
 
+## 在线阅读（GitHub Pages）
+
+- 🌐 官网首页：https://zhaoxinghua09-cell.github.io/nomos-ai/
+- 📖 **XCGS 治理系统白皮书**：https://zhaoxinghua09-cell.github.io/nomos-ai/xcgs-governance-system.html
+- 🎯 公司远景（四支柱）：https://zhaoxinghua09-cell.github.io/nomos-ai/vision.html
+
 ## 核心技能
 
 | 技能 | 说明 | 线上地址 |
