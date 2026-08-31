@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nomos AI · 公司远景｜人与 AI 治理</title>
+<meta name="description" content="Nomos AI（诺摩斯智能）公司远景：人与 AI 治理四支柱——AI 护照机制 / XCGS 治理系统 / A³ 法则 / AI 世界共生论，对标 2026 主流标准。">
+<style>
+  :root{
+    --bg:#0b0e1c; --card:#141a33; --card2:#1a2143; --ink:#e8eaf6; --muted:#9aa3c0;
+    --accent:#4f8cff; --gold:#f5c451; --green:#3ddc97; --red:#ff6b6b; --line:#2a3155;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.7}
+  .wrap{max-width:1180px;margin:0 auto;padding:36px 28px 70px}
+
+  .brand-bar{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .brand-l{display:flex;align-items:center;gap:16px}
+  .brand-l img.logo-mark{width:84px;height:84px;display:block}
+  .brand-name{font-size:30px;font-weight:800;letter-spacing:8px;color:#e8eaf6}
+  .brand-name em{font-style:normal;color:var(--accent);letter-spacing:4px;margin-left:6px}
+  .brand-tag{color:var(--gold);font-size:13px;letter-spacing:4px;margin-top:4px}
+  .brand-r{text-align:right;color:var(--muted);font-size:12.5px;line-height:1.9}
+  .brand-r .fp{color:var(--accent);letter-spacing:1px}
+
+  .vision{text-align:center;padding:36px 0 14px}
+  .vision .kicker{color:var(--gold);letter-spacing:5px;font-size:13px}
+  .vision h1{font-size:46px;margin:8px 0 6px;font-weight:800;background:linear-gradient(90deg,#fff 0%,#4f8cff 60%,#3ddc97 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .vision .sub{color:var(--muted);font-size:17px;max-width:880px;margin:8px auto 0}
+  .tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px;margin:10px 4px 0;border:1px solid var(--line)}
+  .t-green{color:var(--green);border-color:var(--green)} .t-red{color:var(--red);border-color:var(--red)} .t-blue{color:var(--accent);border-color:var(--accent)}
+
+  section{margin-top:36px}
+  h2{font-size:22px;border-left:4px solid var(--accent);padding-left:14px;margin-bottom:18px;color:#e8eaf6}
+  h2 small{color:var(--muted);font-size:13px;font-weight:400;margin-left:10px;letter-spacing:1px}
+  pre.diagram{background:#060814;border:1px solid var(--line);border-radius:14px;padding:24px;overflow-x:auto;font-size:12.5px;color:#b8c4e8;line-height:1.45}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .pillar{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .pillar .num{font-size:30px;font-weight:700;color:var(--accent)}
+  .pillar h3{margin-top:4px;color:#e8eaf6;font-size:17px}
+  .pillar p{font-size:13.5px;color:var(--muted);margin-top:8px}
+  .std{font-size:12.5px;color:var(--accent);margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);line-height:1.6}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;font-size:13.5px}
+  th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:var(--card2);color:var(--gold);font-weight:600}
+  tr:last-child td{border-bottom:none}
+  .ok{color:var(--green);font-weight:600}.lock{color:var(--red);font-weight:600}
+  .note{background:var(--card);border-left:3px solid var(--green);padding:14px 18px;border-radius:8px;font-size:14px}
+  .note.warn{border-left-color:var(--gold)}
+
+  footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;text-align:center;line-height:1.9}
+  .foot-fp{color:var(--accent);letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand-bar">
+    <div class="brand-l">
+      <img class="logo-mark" src="logo.svg" alt="NOMOS AI">
+      <div>
+        <div class="brand-name">NOMOS<em>·AI</em></div>
+        <div class="brand-tag">诺摩斯智能 · HUMAN · AI GOVERNANCE</div>
+      </div>
+    </div>
+    <div class="brand-r">
+      品牌：<strong style="color:#e8eaf6">Nomos AI</strong>（与 MedXpert 独立）<br>
+      远景发布时间戳：2026-08-28 ｜ 指纹 <span class="fp">FP-MX-836A60CCF23F</span>
+    </div>
+  </div>
+
+  <div class="vision">
+    <div class="kicker">COMPANY VISION · 公司远景</div>
+    <h1>让每一份人机信任都可被法则守护</h1>
+    <p class="sub">把「身份 + 治理 + AI 造 AI 法则 + 共生论」打包成一套自描述、带溯源指纹、可直接当产品消费的治理体系——让 AI 与人在「秩序」中共生。</p>
+    <div>
+      <span class="tag t-blue">AI 护照机制</span>
+      <span class="tag t-blue">XCGS 治理系统</span>
+      <span class="tag t-blue">A³ 法则</span>
+      <span class="tag t-blue">AI 世界共生论</span>
+      <span class="tag t-green">67 技能承载</span>
+      <span class="tag t-green">52 可发布</span>
+      <span class="tag t-red">15 锁资质</span>
+    </div>
+  </div>
+
+  <section>
+    <h2>全景图 <small>FOUR PILLARS · 互相提高闭环</small></h2>
+<pre class="diagram">
+                         ┌─────────────────────────────────────────────┐
+                         │            Nomos AI 公司远景                  │
+                         │     秩序共生 · 人机法则 · 身份可信            │
+                         └─────────────────────────────────────────────┘
+                                          │
+        ┌─────────────────────────────────┼─────────────────────────────────┐
+        │                                 │                                 │
+  ① AI 护照机制                  ② XCGS 治理系统                  ③ A³ 法则（AI 造 AI 三定律）
+  AI Passport Regime            （可审计·可认证·可举证）           （不可绕过的安全护栏）
+  每个技能=唯一可溯身份          决策日志/风险登记/模型卡/          T1–T5 触发阈值 + 四维评分卡
+        │                        变更/人类监督/事件台账            │
+        │                                 │                                 │
+        └─────────────────────────────────┼─────────────────────────────────┘
+                                          │
+                                  ④ AI 世界共生论
+                                     「智能为人 · 不落下每一个人」
+                                          │
+                          ┌───────────────────────────────────────┐
+                          │   互相提高闭环（治理持续落地）            │
+                          │  理念 → 注入技能 → 调研新证回流 →        │
+                          │  理念刷新 → 技能反向引用操作化 skill     │
+                          └───────────────────────────────────────┘
+                                          │
+                          ┌───────────────────────────────────────┐
+                          │   产品承载：67 技能（均带治理段+指纹）   │
+                          │   52 可发布 ｜ 15 锁资质（医疗·待资质）   │
+                          └───────────────────────────────────────┘
+                                          │
+                          ┌───────────────────────────────────────┐
+                          │   生态分发：27 原生(零改造) + 8 插件/Bot │
+                          │   ClawHub/SkillHub/SkillPie + Coze(试点) │
+                          └───────────────────────────────────────┘
+</pre>
+  </section>
+
+  <section>
+    <h2>四支柱 · 2026 标准对齐 <small>STANDARD ALIGNMENT</small></h2>
+    <div class="grid">
+      <div class="pillar">
+        <div class="num">①</div>
+        <h3>AI 护照机制</h3>
+        <p>每个技能/智能体赋予唯一可追溯身份，跨域可溯、身份可信。</p>
+        <div class="std">GB/Z 185—2026 智能体身份码(2000+·AIP V2.1)｜W3C AIP→IETF 草案｜Okta for AI Agents GA</div>
+      </div>
+      <div class="pillar">
+        <div class="num">②</div>
+        <h3>XCGS 治理系统</h3>
+        <p>把治理从理念落成可对外举证的证据底座：决策日志、风险登记册、模型卡、变更记录、人类监督证明、事件处置台账。</p>
+        <div class="std">ISO/IEC 42001(GB/T 45081-2024 等同采用)｜NIST AI RMF 1.2｜OWASP Agentic Top 10｜EU AI Act Art 52a</div>
+      </div>
+      <div class="pillar">
+        <div class="num">③</div>
+        <h3>A³ 法则</h3>
+        <p>AI 生成/演进 AI 须嵌不可绕过的安全护栏，配触发阈值 + 事前评估 + 事后复盘。</p>
+        <div class="std">现代化 Asimov 三定律｜Anthropic RSP v3.0 评估门禁｜Constitutional AI 2.0</div>
+      </div>
+      <div class="pillar">
+        <div class="num">④</div>
+        <h3>AI 世界共生论</h3>
+        <p>AI 与人「智能为人、不落下每一个人」，倡导共处而非替代。</p>
+        <div class="std">与「人类监督不可削弱」普遍安全观同频｜Finkel 现代化三定律呼吁</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>产品承载 & 生态发布 <small>67 SKILLS · 4 MARKETS</small></h2>
+    <table>
+      <tr><th>市场</th><th>已就绪</th><th>锁资质</th><th>状态</th></tr>
+      <tr><td>ClawHub（原生零改造）</td><td>52</td><td>15</td><td><span class="ok">发布前就绪</span></td></tr>
+      <tr><td>SkillHub（原生零改造）</td><td>52</td><td>15</td><td><span class="ok">发布前就绪</span></td></tr>
+      <tr><td>SkillPie（原生零改造）</td><td>52</td><td>15</td><td><span class="ok">发布前就绪</span></td></tr>
+      <tr><td>Coze（插件试点）</td><td>52</td><td>15</td><td><span class="ok">上架包已生成</span></td></tr>
+    </table>
+    <div class="note warn" style="margin-top:14px">0 已实际发布 —— 发布为外部动作，须用户明确确认 + 提供市场凭证（ClawHub / SkillHub / SkillPie 账号，或 Coze PAT）。医疗 15 个继续锁资质。</div>
+  </section>
+
+  <footer>
+    Nomos AI · 诺摩斯智能｜让每一份人机信任都可被法则守护<br>
+    治理理念承自 MedXpert「注册老炮」体系（XCGS / A³ 法则 / AI 护照机制 / AI 世界共生论）<br>
+    版权 Nomos AI · MIT ｜ 时间戳 2026-08-28 ｜ 远景指纹 <span class="foot-fp">FP-MX-836A60CCF23F</span>
+  </footer>
+
+</div>
+</body>
+</html>
