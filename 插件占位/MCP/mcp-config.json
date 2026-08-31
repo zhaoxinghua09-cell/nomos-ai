@@ -1,0 +1,18 @@
+{
+  "name": "synomosai-governance-mcp",
+  "version": "1.0.0",
+  "fingerprint": "FP-MX-6999EE1111DE",
+  "description": "SynomosAI 人与 AI 治理工具集（MCP 占位）：审计证据链 / A³ 评估 / 护照查询 / 合规清单 / 治理扫描",
+  "tools": [
+    "audit_evidence_chain",
+    "a3_assess",
+    "passport_lookup",
+    "compliance_checklist",
+    "gov_scan"
+  ],
+  "transport": "stdio",
+  "status": "placeholder",
+  "license": "MIT",
+  "copyright": "SynomosAI",
+  "timestamp": "2026-08-28"
+}
