@@ -1,0 +1,33 @@
+openapi: 3.1.0
+info:
+  title: SynomosAI Governance API
+  version: 1.0.0
+  description: 人与 AI 治理 API（最小版）。指纹 FP-MX-B625B4F5BD10
+  license:
+    name: MIT
+servers:
+  - url: https://api.synomosai/v1
+  /v1/health:
+    get:
+      summary: Health
+      operationId: health_v1_health_get
+  /v1/audit/evidence-chain:
+    post:
+      summary: Audit Evidence Chain
+      operationId: audit_evidence_chain_v1_audit_evidence_chain_post
+  /v1/a3/assess:
+    post:
+      summary: A3 Assess
+      operationId: a3_assess_v1_a3_assess_post
+  /v1/passport/{skill_id}:
+    get:
+      summary: Passport Lookup
+      operationId: passport_lookup_v1_passport__skill_id__get
+  /v1/compliance/checklist:
+    get:
+      summary: Compliance Checklist
+      operationId: compliance_checklist_v1_compliance_checklist_get
+  /v1/gov/scan:
+    post:
+      summary: Gov Scan
+      operationId: gov_scan_v1_gov_scan_post
