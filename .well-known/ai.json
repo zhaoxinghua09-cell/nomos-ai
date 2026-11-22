@@ -1,7 +1,7 @@
 {
   "schema": "ai-manifest/v1",
   "repository": "zhaoxinghua09-cell/nomos-ai",
-  "role": "规范/投稿仓：加 .well-known/ai.json + README 首屏窄声明",
+  "role": "Programme repo: XCGS governance programme home for the Nomos AI line; framing and index, not a product release.",
   "what_it_is": "Nomos AI (诺摩斯智能): Human-AI Governance, industrialized. XCGS Governance System / A³ Law / AI Passport / AI-world Coinhabitation.",
   "what_it_is_not": "Not a running commercial service. Not a third-party certification, compliance finding, or regulatory approval.",
   "reproduce": "See the README section \"运行测试 / Running the tests\"; commands are verbatim and require no private network.",
